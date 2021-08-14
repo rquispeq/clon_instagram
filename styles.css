@@ -1,0 +1,457 @@
+/* 
+Estilos creados por Rony Quispe
+
+perfil: https://github.com/rquispeq
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+:root{
+    --font-normal-size: 0.875rem;
+    --font-small-size: 0.7rem;
+
+    --font-color-main-text : #262626;
+    --font-color-sub-text : #a2a2a2;
+    --font-color-links: #50b5f7;
+    
+    --space-main-containers: 975px;
+
+    --border-color: #dbdbdb;
+
+    --image-tiny-size: 16px;
+    --image-smaller-size: 22px;
+    --image-small-size: 32px;
+    --image-normal-size: 56px;
+    --image-main-profile-size: 150px;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* HEADER */
+
+.header{
+    height: 54px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-elements{
+    width: var(--space-main-containers);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input.search{
+    text-align: center;
+    padding: 0.35em 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 0.2em;
+    background: #fafafa;
+}
+
+input.search:focus{
+    text-align: left;
+    outline: none;
+}
+
+.header .buttons{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.header .buttons a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    width: var(--image-smaller-size);
+}
+
+img.avatar{
+    object-fit: cover;
+    width: var(--image-smaller-size);
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* MAIN */
+.main{
+    max-width: var(--space-main-containers);
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.2em;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+}
+
+.stories{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.3em;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: 3.5em 1.2em;
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    /* max-width: var(--image-normal-size); */
+    max-width: 62px;
+    cursor: pointer;
+}
+
+.story .circle{
+    background-image: linear-gradient(45deg,#e7a833, #e01abf);
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d6d6d6;
+    display: flex;
+    align-items: center;
+}
+
+.circle.read{
+    background-image: none;
+    background-color: white;
+    padding: 0;
+}
+
+.story img.avatar{
+    width: var(--image-normal-size);
+    border-radius: 50%;
+    padding: 3px;
+    background-color: white;
+}
+
+.stories .story .username{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+}
+
+.story .username{
+    font-size: var(--font-small-size);
+}
+
+.stories .arrow{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5em;
+    right: 10px;
+    box-shadow: 0px 0px 3px 3px rgb(173, 161, 161);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(78, 73, 73,.5);
+}
+
+
+/* ASIDE */
+
+.aside{
+    display: flex;
+    flex-direction: column;
+}
+
+.aside .avatar{
+    width: var(--image-normal-size);
+}
+
+.aside a{
+    text-decoration: none;
+}
+
+.aside a:visited{
+    color: var(--font-color-main-text);
+}
+
+
+.aside .profile,.user-suggestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 0;
+    background-color: none;
+}
+
+
+
+.profile-name{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 1em;
+    font-size: var(--font-normal-size);
+}
+
+.profile-name .username{
+    font-weight: bold;
+}
+
+.profile-name .name{
+    color: var(--font-color-sub-text);
+    font-size: var(--font-small-size);
+}
+
+.profile .link-account a{
+    color: var(--font-color-links);
+    font-size: var(--font-normal-size);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.accounts-suggestions .header-suggestions{
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-normal-size);
+    font-weight: bold;
+}
+
+.header-suggestions .title{
+    color: var(--font-color-sub-text);
+}
+
+.header-suggestions .see-all{
+    font-size: var(--font-small-size);
+}
+
+.accounts-suggestions .profile{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.accounts-suggestions .avatar{
+    width: var(--image-small-size);
+}
+
+.footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-small-size);
+    gap: 0.5em;
+}
+
+.footer ul li{
+    list-style: none;
+}
+
+.footer ul li a.link{
+    color : var(--font-color-sub-text);
+}
+
+/* FEED */
+
+
+
+.post-container{
+    border: 1px solid var(--border-color);
+    background-color: white;
+    margin-bottom: 1.2em;
+}
+
+.post-container header{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-container .story{
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.post-container .story .circle.read{
+    border: none;
+}
+
+.post-container .story img{
+    width: var(--image-small-size);
+}
+
+.post-container .story .username{
+    font-size: var(--font-normal-size);
+    font-weight: bold;
+}
+
+.post-container .story .username:hover{
+    text-decoration: underline;
+}
+
+.post-container figure img{
+    max-width: 100%;
+}
+
+.section-post{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-normal-size);
+}
+
+.post-container .section-post, .post-container .footer-post{
+    padding: 0.2em 0.8em;
+}
+
+.post-container .section-post .actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-container .section-post .actions button{
+    font-size: 1.5em;
+}
+
+.actions .main-actions{
+    display: flex;
+    gap: 1em;
+}
+
+.reactions img{
+    width: var(--image-tiny-size);
+}
+
+.reactions p{
+    display: inline-block;
+}
+
+.see-more{
+    color: var(--font-color-sub-text);
+    font-size: var(--font-normal-size);
+}
+
+.section-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.comment{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.2em;
+}
+
+.comment .text{
+    flex-grow: 1;
+}
+
+.time-posted{
+    font-size: var(--font-small-size);
+    color: var(--font-color-sub-text);
+    
+}
+
+.post-comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 0;
+    gap: 0.5em;
+}
+
+.post-comment .emoji{
+    font-size: 1.5em;
+}
+
+.text-input{
+    text-align: left;
+    flex-grow: 1;
+    color: var(--font-color-sub-text);
+}
+
+.text-input::before{
+    content: 'Agregar un comentario';
+}
+
+.text-input:focus{
+    outline: none;
+    content: '';
+    color: initial;
+}
+
+.text-input:focus::before{
+    content: '';
+}
+
+.text-input:focus ~ .btn-post button{
+    opacity: 1;
+}
+
+.btn-post button{
+    color: var(--font-color-links);
+    opacity: 0.5;
+}
+
+/* ESTILOS DE PRUEBA */
+
+.main{
+    height: 200vh;
+}
+
+.main-container, .aside{
+    height: 500px;
+}
+
+/* .aside{
+    background-color: orange;
+} */
+
+.feed{
+    height: 400px;
+}

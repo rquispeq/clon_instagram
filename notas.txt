@@ -1,0 +1,31 @@
+Textos:
+12 pixeles
+14 pixeles estandar para todo
+10 pixeles sobre el tiempo que se publico una foto
+16 pixeles para texto de informacion de mi perfil, publicaciones, segujidores, seguidos
+2 colores:
+gris y negro, y un font bold
+
+tamaño de texto de mi perfil principal 28px
+
+avatar:
+Avatar de header el mas pequeño 22 pixeles
+Avatar de feed y sugerencias 32
+Avatar de historias y perfil 56
+Avatar de mi perfil principal 150px
+
+
+header:
+54 pixeles de height
+
+
+Imagenes:
+Tamaño de 293px en perfil
+Tamaño de 614
+
+colores:
+bordes generales: #dbdbdb
+color de texto de follow y cambiar perfil: #50b5f7
+color de texto de subelementos: #a2a2a2
+color de texto general: #262626
+background: #fafafa
